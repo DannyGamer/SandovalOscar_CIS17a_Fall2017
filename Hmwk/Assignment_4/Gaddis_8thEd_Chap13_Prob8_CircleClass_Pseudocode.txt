@@ -1,0 +1,110 @@
+main.cpp
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+/* 
+ * File:   main.cpp
+ * Author: Oscar Sandoval
+ * Created on October 20th, 2017, 7:20 PM
+ * Purpose: Create a program that calculates area, diameter, and circumference
+            of a circle from a radius input by the user.
+ */
+
+//System Libraries
+	//Input - Output Library
+	//Format Library
+
+//Name-space under which system libraries exist
+
+//User Libraries
+	//Include "Circle.h" header file
+
+//Global Constants
+
+//Function Prototypes
+
+//Execution begins here
+   //Declare variables
+       //Radius of a circle
+    
+    //Input radius
+		//Check to see that the value is greater than 0
+			//If less than 0, output statement prompting user to enter a value greater than 0, and repeat input, else continue program
+    
+    //Declare Circle object
+		//Pass the value of r to the construct function of the object
+       
+    //Output the transformed data
+		//Output radius, area, diameter, and circumference
+    
+    //Exit stage right!
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+Cicle.h
+
+-----------------------------------------------------------
+/* 
+ * Author: Oscar Sandoval
+ * Date: October 20th, 2017
+ * Purpose: Circle class specification
+ */
+
+
+//Define Circle class
+    private:
+        //Radius of circle
+        //Constant for pi
+    public:
+        //Default Construct
+        //Construct that acccepts a float argument
+        //Function to set radius value
+        //Function to return radius of circle
+        //Function to return area of circle
+        //Function to return diameter of circle
+        //Function to return circumference of circle
+};
+
+/* PAYROLL_H */
+--------------------------------------------------------------
+
+
+
+
+
+
+
+Circle.cpp
+
+---------------------------------------------------------------
+/* 
+ * Author: Oscar Sandoval
+ * Date: October 20th, 2017
+ * Purpose:  class implementation
+ */
+
+//Include "Circle.h" header file
+
+//Construct 
+   //Set radius to 0
+
+//Construct with float argument
+    //Set radius to value of r
+
+//Set radius of circle
+    //Set radius to value of r
+
+//Retrieve radius of circle
+
+//Calculate area of circle and return it
+
+//Calculate diameter of circle and return it
+
+//Calculate circumference of circle and return it
+---------------------------------------------------------------
+
