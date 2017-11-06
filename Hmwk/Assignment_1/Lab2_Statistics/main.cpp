@@ -145,33 +145,55 @@ float median(int *array, int size)
 
 int *mode(int *array, int size, int &more)
 {
-    int value;
+    int value;       //Value of mode
     int number = 1;  //Number of modes
-    int repeat = 1;
-    int pRepeat = 0;
-    //vector<int> nums; //DIfferent modes available
+    int repeat = 1;  //Number a value of repeats
+    int pRepeat = 0; //Number of previous value repeats
+    vector<int> nums; //Value of the different modes available
     
-    for(int index = 0; index < size - 1; index++)
+//    for(int index = 0; index < size - 1; index++)
+//    {
+//        for(int count = index + 1; count < size; count++)
+//        {
+//            if(array[index] == array[count])
+//            {
+//                repeat++;
+//            }
+//        }
+//        pRepeat = repeat;
+//        
+//        if(repeat > pRepeat)
+//        {
+//            value = 
+//        }
+//    }
+    
+    
+    
+    for(int index = 0, count = index + 1; index < size - 1, count < size; index++, count++)
     {
-        for(int count = index + 1; count < size; count++)
-        {
+            //Compare first value with second value
             if(array[index] == array[count])
             {
-                repeat++;
-                if(repeat >= pRepeat)
+                repeat++; //Increase number of repetitions for given value
+                cout << "Repeat: " << repeat << endl;
+                cout << "pRepeat: " << pRepeat << endl;
+                
+                if(repeat == pRepeat)
+                {
+                    cout << "Repeating" << endl;
+                    number++;
+                    nums.push_back(value);
+                }
+                
+                if(repeat > pRepeat)
+                {
+                    number = 1;
                     value = array[index];
-//                if(repeat == pRepeat)
-//                {
-//                    number++;
-//                    nums.push_back(value);
-//                    more = number;
-//                }
-//                else if(repeat == 1)
-//                    number = 0;
-                pRepeat = repeat;
+                    pRepeat = repeat;
+                }
             }
-        }
-        repeat = 0;
+        repeat = 1;
     }
 
 //    int size2 = number + 2;
@@ -188,8 +210,17 @@ int *mode(int *array, int size, int &more)
     
     if(pRepeat == 0)
         cout << "There is no mode." << endl;
-    else
+    else if(number == 1)
         cout << "The mode is " << value << endl;
+    else
+    {
+        cout << "The modes are ";
+        cout << number << endl;
+        for(int index = 0; index < number; index++)
+        {
+            cout << nums[index] << ", ";
+        }
+    }
     
     //return mode;
 }
