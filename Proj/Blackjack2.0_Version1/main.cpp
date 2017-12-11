@@ -12,14 +12,13 @@ using namespace std; //Name-space under which system libraries exist
 
 //User Libraries
 #include "cards.h"
-#include "game.h"
 #include "player.h"
 #include "stats.h"
 
 //Global Constants
 
 //Function Prototypes
-void menu(char);
+void menu();
 
 //Execution begins here
 int main(int argc, char** argv) {
@@ -39,27 +38,37 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-void menu(char choice)
+void menu()
 {
-    char choice;
+    char choice;  //Choice for option menu
     
-    cout << "**********************************************\n"
-            "*                Blackjack                   *\n"
-            "**********************************************\n";
-    cout << "Choose an option:" << endl;
-    cout << "1) Play" << endl;
-    cout << "2) Help" << endl;
-    cout << "3) Cash Out (Exit Game)" << endl;
-    
-    switch(choice)
+    do
     {
-        case '1':
-            break;
-        case '2':
-            break;
-        case '3':
-            cout << "Game Over" << endl;
-            exit(0);
-            break;
-    }
+        //Display menu
+        cout << "**********************************************\n"
+                "*                Blackjack                   *\n"
+                "**********************************************\n";
+        cout << "1) Play" << endl;
+        cout << "2) Help" << endl;
+        cout << "3) Cash Out (Exit Game)" << endl;
+        cout << "Choose an option:" << endl;
+        
+        //Enter choice for menu option
+        cin >> choice;
+
+        switch(choice)
+        {
+            case '1':
+                break;
+            case '2':
+                break;
+            case '3':
+                cout << "Game Over" << endl;
+                exit(0);
+                break;
+            default:
+                cout << "Bad input." << endl;
+                break;
+        }
+    } while(choice != '1' && choice != '2' && choice != '3');
 }
