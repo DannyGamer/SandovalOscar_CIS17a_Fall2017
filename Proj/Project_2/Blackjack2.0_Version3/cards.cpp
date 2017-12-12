@@ -15,11 +15,7 @@
 using namespace std;
 
 int Cards::givCard()
-{
-    int index;
-    static int prevIndex;
-    bool givOther;
-    
+{    
     // NOTE: We wait 1000 milliseconds because po/fast CPUs
     // give the same number inside random.
     this_thread::sleep_for(chrono::milliseconds(1000));
@@ -36,7 +32,7 @@ int Cards::givCard()
         
         if(index == prevIndex)
             givOther = true;
-        prevIndex = index;
+        setpIndex(index);
     } while(total[index] < 0 || givOther); // Loop while a card is given when there are no more available
     
     // Remove card from card total in deck
@@ -49,3 +45,12 @@ int Cards::givCard()
     // Return value of random card
     return value[index];
 }
+
+// Set prevIndex to index so that repetitive cards will not be given in a row
+int Cards::setpIndex(int index)
+{
+    prevIndex = index;
+}
+
+// Definition of the static member variable
+int Cards::prevIndex = 13;

@@ -8,15 +8,16 @@
 #ifndef STATS_H
 #define STATS_H
 
+//template <class T>
 class Stats
 {
     private:
-        float money;   //Money gambled and earned
-        int win;       //Number of games won
-        int loss;      //Number of games lost
+        float money;    //Money gambled and earned
+        int win;    //Number of games won
+        int loss;   //Number of games lost
     public:
         Stats();
-        int getMoney();
+        float getMoney();
         void wins(int);
         void losses(int);
         void output();

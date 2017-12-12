@@ -6,10 +6,10 @@
 
 #include <iostream>
 #include <iomanip>
-
 #include "stats.h"
-
 using namespace std;
+
+//template <class T>
 Stats::Stats()
 {
     money = 500;
@@ -17,11 +17,13 @@ Stats::Stats()
     loss = 0;
 }
 
-int Stats::getMoney()
+//template <class T>
+float Stats::getMoney()
 {
     return money;
 }
 
+//template <class T>
 void Stats::wins(int gambled)
 {
     cout << "\nYou win!\n\n" << endl;
@@ -29,6 +31,7 @@ void Stats::wins(int gambled)
     win++;
 }
 
+//template <class T>
 void Stats::losses(int gambled)
 {
     cout << "\nYou lose\n\n" << endl;
@@ -36,6 +39,7 @@ void Stats::losses(int gambled)
     loss++;
 }
 
+//template <class T>
 void Stats::output()
 {
     cout << fixed << setprecision(1) << showpoint;

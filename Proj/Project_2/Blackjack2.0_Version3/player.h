@@ -13,7 +13,7 @@ using namespace std;
 
 class Player
 {
-    private:
+    protected:
         vector<int> hand;    //Vector to hold the cards that the player will get
     public:
         ~Player();
